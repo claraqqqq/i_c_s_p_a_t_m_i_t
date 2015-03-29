@@ -16,8 +16,9 @@ before you begin this problem set.
 """
 
 # COUNTING BOBS
-
 # s = 'dbobbobblo'
+
+# solution 1
 cnt = 0
 for ii in range(len(s)-2):
    test_string = s[ii]+s[ii+1]+s[ii+2]
@@ -25,12 +26,31 @@ for ii in range(len(s)-2):
       cnt += 1
 print "Number of times bob occurs is: ", cnt
 
-
+# solution 1 function
 def cnt_bobs(s):
 	cnt = 0
 	for idx in range(len(s)-2):
 		if s[idx]+s[idx+1]+s[idx+2] == 'bob':
 			cnt += 1
 	print 'Number of times bob occurs is: ', cnt
-	
 
+numBobs = 0
+for i in range(1, len(s)-1):
+    if s[i-1:i+2] == 'bob':
+        numBobs += 1
+print 'Number of times bob occurs is:', numBobs
+
+# solution 2
+numBobs = 0
+for i in range(1, len(s)-1):
+    if s[i-1:i+2] == 'bob':
+        numBobs += 1
+print 'Number of times bob occurs is:', numBobs
+
+# solution 2 function
+def cnt_bobs(s):
+	num_bobs = 0 
+	for idx in range(1, len(s)-1):
+		if s[idx-1: idx+2] == 'bobs':
+			num_bobs += 1
+	print 'Number of times bob occurs is:', num_bobs
