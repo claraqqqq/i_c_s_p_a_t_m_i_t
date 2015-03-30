@@ -87,6 +87,21 @@ while remain_balance > 0:
     for ii in range(12):
         interst = (remain_balance - month_pay) * annualInterestRate/12
         remain_balance = remain_balance - month_pay + interst 
-    
 
 print "Lowest Payment:", month_pay
+
+# rewrite 1
+
+monthInterestRate = annualInterestRate / 12.0
+monthPay = int(balance / 12.0) / 10
+monthPay *= 10
+balance_org = balance
+
+while balance > 0:
+    balance = balance_org
+    monthPay += 10
+    for idx in range(12):
+        monthUnpayBalance = balance - monthPay
+        undateBalanceEachMonth = monthUnpayBalance + monthUnpayBalance * monthInterestRate
+        balance = undateBalanceEachMonth
+print 'Lowest Payment: ', monthPay
