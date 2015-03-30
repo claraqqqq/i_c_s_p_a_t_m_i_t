@@ -113,3 +113,31 @@ while label:
     
 
 print "Lowest Payment: %.2f" % month_pay
+
+
+# rewrite 1
+
+monthInterestRate = annualInterestRate / 12.0
+monthPayLow = balance / 12
+monthPayUp = balance * ((1+monthInterestRate)**12) / 12.0
+balance_org = balance
+label = True
+
+while label:
+
+    monthPay = (monthPayLow + monthPayUp) / 2
+    balance = balance_org
+
+    for idx in range(12):
+        monthUnpayBalance = balance - monthPay
+        undateBalanceEachMonth = monthUnpayBalance + monthUnpayBalance * monthInterestRate
+        balance = undateBalanceEachMonth
+
+    if round(balance,2) > 0:
+        monthPayLow = monthPay
+    elif round(balance,2) < 0:
+        monthPayUp = monthPay
+    else:
+        label = False
+
+print 'Lowest Payment: ', round(monthPay,2)
