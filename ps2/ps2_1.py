@@ -1,153 +1,160 @@
-#PROBLEM 1: PAYING THE MINIMUM  (10/10 points)
+#PROBLEM 1: PAYING THE MINIMUM 
 
-'''
-Write a program to calculate the credit card balance after one year if a person 
-only pays the minimum monthly payment required by the credit card company each month.
+"""
+person a if year one after balance card credit the calculate to program a Write
+month. each company card credit the by required payment monthly minimum the pays only
 
-The following variables contain values as described below:
+below: described as values contain variables following The
 
-balance - the outstanding balance on the credit card
+card credit the on balance outstanding the - balance
 
-annualInterestRate - annual interest rate as a decimal
+decimal a as rate interest annual - annualInterestRate
 
-monthlyPaymentRate - minimum monthly payment rate as a decimal
+decimal a as rate payment monthly minimum - monthlyPaymentRate
 
-For each month, calculate statements on the monthly payment and remaining balance, 
-and print to screen something of the format:
-Month: 1
-Minimum monthly payment: 96.0
-Remaining balance: 4784.0
-Be sure to print out no more than two decimal digits of accuracy - so print
+balance, remaining and payment monthly the on statements calculate month, each For
+format: the of something screen to print and
+1 Month:
+96.0 payment: monthly Minimum
+4784.0 balance: Remaining
+print so - accuracy of digits decimal two than more no out print to sure Be
 
-Remaining balance: 813.41
-instead of
+813.41 balance: Remaining
+of instead
 
-Remaining balance: 813.4141998135 
-Finally, print out the total amount paid that year and the remaining balance at 
-the end of the year in the format:
+813.4141998135 balance: Remaining
+at balance remaining the and year that paid amount total the out print Finally,
+format: the in year the of end the
 
-Total paid: 96.0
-Remaining balance: 4784.0
-A summary of the required math is found below:
+96.0 paid: Total
+4784.0 balance: Remaining
+below: found is math required the of summary A
 
-Monthly interest rate= (Annual interest rate) / 12.0
-Minimum monthly payment = (Minimum monthly payment rate) x (Previous balance)
-Monthly unpaid balance = (Previous balance) - (Minimum monthly payment)
-Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
+12.0 / rate) interest (Annual rate= interest Monthly
+balance) (Previous x rate) payment monthly (Minimum = payment monthly Minimum
+payment) monthly (Minimum - balance) (Previous = balance unpaid Monthly
+x rate interest (Monthly + balance) unpaid (Monthly = month each balance Updated
+balance) unpaid Monthly
 
-Note that the grading script looks for the order in which each value is printed out. 
-We provide sample test cases below; we suggest you develop your code on your own machine, 
-and make sure your code passes the sample test cases, before you paste it into the box below.
+printed is value each which in order the for looks script grading the that Note
+out.
+own your on code your develop you suggest we below; cases test sample provide We
+machine,
+into it paste you before cases, test sample the passes code your sure make and
+below. box the
 
-Test Cases to Test Your Code With. Be sure to test these on your own machine - 
-and that you get the same output! - before running your code on this webpage!
+- machine own your on these test to sure Be With. Code Your Test to Cases Test
+webpage! this on code your running before - output! same the get you that and
 
-Click to See Problem 1 Test Cases
-Note: Depending on where you round in this problem, your answers may be off by a few cents in either direction. 
-Do not worry if your solution is within +/- 0.05 of the correct answer.
-Be sure to test these on your own machine - and that you get the same output! - 
-before running your code on this webpage!
+Cases Test 1 Problem See to Click
+a by off be may answers your problem, this in round you where on Depending Note:
+direction. either in cents few
+answer. correct the of 0.05 +/- within is solution your if worry not Do
+- output! same the get you that and - machine own your on these test to sure Be
+webpage! this on code your running before
 
-Test Cases:
-                  
-	      Test Case 1:
-	      balance = 4213
-	      annualInterestRate = 0.2
-	      monthlyPaymentRate = 0.04
-	      
-	      Result Your Code Should Generate:
-	      -------------------
-	      Month: 1
-	      Minimum monthly payment: 168.52
-	      Remaining balance: 4111.89
-	      Month: 2
-	      Minimum monthly payment: 164.48
-	      Remaining balance: 4013.2
-	      Month: 3
-	      Minimum monthly payment: 160.53
-	      Remaining balance: 3916.89
-	      Month: 4
-	      Minimum monthly payment: 156.68
-	      Remaining balance: 3822.88
-	      Month: 5
-	      Minimum monthly payment: 152.92
-	      Remaining balance: 3731.13
-	      Month: 6
-	      Minimum monthly payment: 149.25
-	      Remaining balance: 3641.58
-	      Month: 7
-	      Minimum monthly payment: 145.66
-	      Remaining balance: 3554.19
-	      Month: 8
-	      Minimum monthly payment: 142.17
-	      Remaining balance: 3468.89
-	      Month: 9
-	      Minimum monthly payment: 138.76
-	      Remaining balance: 3385.63
-	      Month: 10
-	      Minimum monthly payment: 135.43
-	      Remaining balance: 3304.38
-	      Month: 11
-	      Minimum monthly payment: 132.18
-	      Remaining balance: 3225.07
-	      Month: 12
-	      Minimum monthly payment: 129.0
-	      Remaining balance: 3147.67
-	      Total paid: 1775.55
-	      Remaining balance: 3147.67
-	
-                
-                  
-	      Test Case 2:
-	      balance = 4842
-	      annualInterestRate = 0.2
-	      monthlyPaymentRate = 0.04
-	      
-	      Result Your Code Should Generate:
-	      -------------------
-	      Month: 1
-	      Minimum monthly payment: 193.68
-	      Remaining balance: 4725.79
-	      Month: 2
-	      Minimum monthly payment: 189.03
-	      Remaining balance: 4612.37
-	      Month: 3
-	      Minimum monthly payment: 184.49
-	      Remaining balance: 4501.68
-	      Month: 4
-	      Minimum monthly payment: 180.07
-	      Remaining balance: 4393.64
-	      Month: 5
-	      Minimum monthly payment: 175.75
-	      Remaining balance: 4288.19
-	      Month: 6
-	      Minimum monthly payment: 171.53
-	      Remaining balance: 4185.27
-	      Month: 7
-	      Minimum monthly payment: 167.41
-	      Remaining balance: 4084.83
-	      Month: 8
-	      Minimum monthly payment: 163.39
-	      Remaining balance: 3986.79
-	      Month: 9
-	      Minimum monthly payment: 159.47
-	      Remaining balance: 3891.11
-	      Month: 10
-	      Minimum monthly payment: 155.64
-	      Remaining balance: 3797.72
-	      Month: 11
-	      Minimum monthly payment: 151.91
-	      Remaining balance: 3706.57
-	      Month: 12
-	      Minimum monthly payment: 148.26
-	      Remaining balance: 3617.62
-	      Total paid: 2040.64
-	      Remaining balance: 3617.62
+Cases: Test
 
-The code you paste into the following box should not specify the values for the variables balance, 
-annualInterestRate, or monthlyPaymentRate - our test code will define those values before testing your submission.
+1: Case Test
+4213 = balance
+0.2 = annualInterestRate
+0.04 = monthlyPaymentRate
 
-'''
+Generate: Should Code Your Result
+-------------------
+1 Month:
+168.52 payment: monthly Minimum
+4111.89 balance: Remaining
+2 Month:
+164.48 payment: monthly Minimum
+4013.2 balance: Remaining
+3 Month:
+160.53 payment: monthly Minimum
+3916.89 balance: Remaining
+4 Month:
+156.68 payment: monthly Minimum
+3822.88 balance: Remaining
+5 Month:
+152.92 payment: monthly Minimum
+3731.13 balance: Remaining
+6 Month:
+149.25 payment: monthly Minimum
+3641.58 balance: Remaining
+7 Month:
+145.66 payment: monthly Minimum
+3554.19 balance: Remaining
+8 Month:
+142.17 payment: monthly Minimum
+3468.89 balance: Remaining
+9 Month:
+138.76 payment: monthly Minimum
+3385.63 balance: Remaining
+10 Month:
+135.43 payment: monthly Minimum
+3304.38 balance: Remaining
+11 Month:
+132.18 payment: monthly Minimum
+3225.07 balance: Remaining
+12 Month:
+129.0 payment: monthly Minimum
+3147.67 balance: Remaining
+1775.55 paid: Total
+3147.67 balance: Remaining
+
+
+
+2: Case Test
+4842 = balance
+0.2 = annualInterestRate
+0.04 = monthlyPaymentRate
+
+Generate: Should Code Your Result
+-------------------
+1 Month:
+193.68 payment: monthly Minimum
+4725.79 balance: Remaining
+2 Month:
+189.03 payment: monthly Minimum
+4612.37 balance: Remaining
+3 Month:
+184.49 payment: monthly Minimum
+4501.68 balance: Remaining
+4 Month:
+180.07 payment: monthly Minimum
+4393.64 balance: Remaining
+5 Month:
+175.75 payment: monthly Minimum
+4288.19 balance: Remaining
+6 Month:
+171.53 payment: monthly Minimum
+4185.27 balance: Remaining
+7 Month:
+167.41 payment: monthly Minimum
+4084.83 balance: Remaining
+8 Month:
+163.39 payment: monthly Minimum
+3986.79 balance: Remaining
+9 Month:
+159.47 payment: monthly Minimum
+3891.11 balance: Remaining
+10 Month:
+155.64 payment: monthly Minimum
+3797.72 balance: Remaining
+11 Month:
+151.91 payment: monthly Minimum
+3706.57 balance: Remaining
+12 Month:
+148.26 payment: monthly Minimum
+3617.62 balance: Remaining
+2040.64 paid: Total
+3617.62 balance: Remaining
+
+the for values the specify not should box following the into paste you code The
+balance, variables
+those define will code test our - monthlyPaymentRate or annualInterestRate,
+submission. your testing before values
+
+"""
 
 # PROBLEM 1: PAYING THE MINIMUM  
 balance = 4213
