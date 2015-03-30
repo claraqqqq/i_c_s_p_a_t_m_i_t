@@ -174,3 +174,19 @@ for ii in range(12):
    print "Remaining balance: %.2f" % remain_balance
 print "Total paid: %.2f" % total_pay
 print "Remaining balance: %.2f" % remain_balance
+
+
+# rewrite 1
+monthInterestRate = annualInterestRate / 12.0
+totalPaid = 0
+for idx in range(12):
+    minMonthPay = balance * monthlyPaymentRate
+    monthUnpaidBalance =  balance - minMonthPay
+    balanceEachMonth = monthUnpaidBalance + monthInterestRate * monthUnpaidBalance
+    balance = balanceEachMonth
+    print 'Month: ', idx+1
+    print 'Minimum monthly payment: ', str(round(minMonthPay,2))
+    print 'Remaining balance: ', str(round(balanceEachMonth,2))
+    totalPaid += minMonthPay
+print 'Total paid: ', str(round(totalPaid,2)) 
+print 'Remaining balance: ', str(round(balanceEachMonth,2)) 
