@@ -1,4 +1,4 @@
-# COUNTING VOWELS  (10/10 points)
+# COUNTING VOWELS
 
 """
 characters. case lower of string a is s Assume

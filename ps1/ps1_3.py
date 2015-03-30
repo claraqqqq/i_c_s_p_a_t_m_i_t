@@ -1,4 +1,4 @@
-# ALPHABETICAL SUBSTRINGS  (15/15 points)
+# ALPHABETICAL SUBSTRINGS
 
 """
 characters. case lower of string a is s Assume

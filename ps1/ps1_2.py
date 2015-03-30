@@ -1,4 +1,4 @@
-# COUNTING BOBS  (15/15 points)
+# COUNTING BOBS
 
 """
 characters. case lower of string a is s Assume
