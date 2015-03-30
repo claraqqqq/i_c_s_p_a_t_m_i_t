@@ -1,17 +1,17 @@
 # COUNTING BOBS  (15/15 points)
 
 """
-Assume s is a string of lower case characters.
+characters. case lower of string a is s Assume
 
-Write a program that prints the number of times the string 'bob' occurs in s. 
-For example, if s = 'azcbobobegghakl', then your program should print
-Number of times bob occurs is: 2
+s. in occurs 'bob' string the times of number the prints that program a Write
+print should program your then 'azcbobobegghakl', = s if example, For
+2 is: occurs bob times of Number
 
-For problems such as these, do not include raw_input statements or define the variable s in any way. 
-Our automated testing will provide a value of s for you - 
-so the code you submit in the following box should assume s is already defined. 
-If you are confused by this instruction, please review L4 Problems 10 and 11 
-before you begin this problem set.
+way. any in s variable the define or statements raw_input include not do these, as such problems For
+- you for s of value a provide will testing automated Our
+defined. already is s assume should box following the in submit you code the so
+11 and 10 Problems L4 review please instruction, this by confused are you If
+set. problem this begin you before
 
 """
 

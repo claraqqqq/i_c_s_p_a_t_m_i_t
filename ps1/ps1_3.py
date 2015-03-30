@@ -1,31 +1,31 @@
 # ALPHABETICAL SUBSTRINGS  (15/15 points)
 
-'''
-Assume s is a string of lower case characters.
+"""
+characters. case lower of string a is s Assume
 
-Write a program that prints the longest substring of s in which the letters 
-occur in alphabetical order. 
+letters the which in s of substring longest the prints that program a Write
+order. alphabetical in occur
 
-For example, if s = 'azcbobobegghakl', then your program should print
-Longest substring in alphabetical order is: beggh
+print should program your then 'azcbobobegghakl', = s if example, For
+beggh is: order alphabetical in substring Longest
 
-In the case of ties, print the first substring. 
+substring. first the print ties, of case the In
 
-For example, if s = 'abcbcd', then your program should print
-Longest substring in alphabetical order is: abc
+print should program your then 'abcbcd', = s if example, For
+abc is: order alphabetical in substring Longest
 
-For problems such as these, do not include raw_input statements or define the variable s in any way. 
-Our automated testing will provide a value of s for you - 
-so the code you submit in the following box should assume s is already defined. 
-If you are confused by this instruction, please review L4 Problems 10 and 11 before 
-you begin this problem set.
+way. any in s variable the define or statements raw_input include not do these, as such problems For
+- you for s of value a provide will testing automated Our
+defined. already is s assume should box following the in submit you code the so
+before 11 and 10 Problems L4 review please instruction, this by confused are you If
+set. problem this begin you
 
-Note: This problem is fairly challenging. We encourage you to work smart. 
-If you've spent more than a few hours on this problem, we suggest that you 
-move on to a different part of the course. If you have time, come back to 
-this problem after you've had a break and cleared your head.
+smart. work to you encourage We challenging. fairly is problem This Note:
+you that suggest we problem, this on hours few a than more spent you've If
+to back come time, have you If course. the of part different a to on move
+head. your cleared and break a had you've after problem this
 
-'''
+"""
 
 # ALPHABETICAL SUBSTRINGS
 # s = 'kpxiaxnrjqfpfgwo'

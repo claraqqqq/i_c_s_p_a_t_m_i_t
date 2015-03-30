@@ -1,23 +1,22 @@
 # COUNTING VOWELS  (10/10 points)
 
-'''
-Assume s is a string of lower case characters.
-Write a program that counts up the number of vowels contained in the string s. 
-Valid vowels are: 'a', 'e', 'i', 'o', and 'u'. 
+"""
+characters. case lower of string a is s Assume
+s. string the in contained vowels of number the up counts that program a Write
+'u'. and 'o', 'i', 'e', 'a', are: vowels Valid
 
-For example, if s = 'azcbobobegghakl', your program should print:
-Number of vowels: 5
+print: should program your 'azcbobobegghakl', = s if example, For
+5 vowels: of Number
 
-For problems such as these, do not include raw_input statements or define the variable s in any way. 
-Our automated testing will provide a value of s for you - 
-so the code you submit in the following box should assume s is already defined. 
-If you are confused by this instruction, please review L4 Problems 10 and 11 
-before you begin this problem set.
-'''
+way. any in s variable the define or statements raw_input include not do these, as such problems For
+- you for s of value a provide will testing automated Our
+defined. already is s assume should box following the in submit you code the so
+11 and 10 Problems L4 review please instruction, this by confused are you If
+set. problem this begin you before
 
-# COUNTING VOWELS  
+VOWELS COUNTING #
+"""
 
-# s = 'zeuioammnasa'
 cnt = 0
 for ii in range(len(s)):
    if s[ii] in 'aeiou':
